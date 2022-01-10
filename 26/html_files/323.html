@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html class="GLOBAL RESPONSIVENESS // lg:text-lg">
+ <head>
+  <title>
+   Le Wagon x Advent of Code
+  </title>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="authenticity_token" name="csrf-param">
+   <meta content="E0q-DPoVweRlwUnwh5lxrmt7M-H6MzrstP8-Hys54HH4kWz47VxB9OpySxM66v7qMZM5-6Uad-MZjd-A8665OQ" name="csrf-token"/>
+   <script data-turbolinks-track="reload" src="/packs/js/application-68c6aebfc9a489c2f376.js">
+   </script>
+   <link data-turbolinks-track="reload" href="/packs/css/application-234f5484.css" media="all" rel="stylesheet"/>
+   <link href="/packs/media/images/favicon-7570c804a9b4e5a5753a415bcde2a7ef.png" rel="shortcut icon" type="image/x-icon"/>
+   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600&amp;display=swap" rel="stylesheet"/>
+  </meta>
+ </head>
+ <body class="font-mono text-aoc-gray bg-dark min-h-screen flex flex-col">
+  <header>
+   <div class="my-8 select-none">
+    <h1 class="text-center text-xl">
+     <span class="text-wagon-red text-shadow-red">
+      Le Wagon
+     </span>
+     <span>
+      x
+     </span>
+     <span class="text-aoc-green-flash text-shadow-green">
+      Advent of Code
+     </span>
+    </h1>
+    <div class="hidden my-4 text-2xl text-aoc-atmospheric" data-controller="countdown" data-countdown-refresh-interval-value="23">
+     <div class="flex items-center justify-center gap-x-3">
+      <img class="hidden w-5 h-5" data-countdown-target="party" src="/packs/media/images/parrot-58d4bcc53c62eccd4e7120cda0986c4a.gif"/>
+      <div>
+       <span data-countdown-target="hours">
+       </span>
+       :
+       <span data-countdown-target="minutes">
+       </span>
+       :
+       <span data-countdown-target="seconds">
+       </span>
+       .
+       <span data-countdown-target="milliseconds">
+       </span>
+      </div>
+      <img class="hidden w-5 h-5" data-countdown-target="party" src="/packs/media/images/parrot-58d4bcc53c62eccd4e7120cda0986c4a.gif"/>
+     </div>
+    </div>
+   </div>
+   <div class="mx-auto px-4 py-2 max-w-xl flex justify-between items-center border-b border-aoc-gray-darker select-none">
+    <a class="text-center text-aoc-green-flash hover:text-shadow-green" href="/about">
+     Q&amp;A
+    </a>
+    <a class="link" href="/">
+     dashboard
+    </a>
+    <a class="link" href="/scoreboard">
+     scoreboards
+    </a>
+    <a class="link" href="/stats">
+     stats
+    </a>
+    <a class="link" href="/settings">
+     settings
+    </a>
+    <a class="hover:text-wagon-red" data-method="delete" href="/sign_out" rel="nofollow">
+     <i class="fas fa-power-off">
+     </i>
+    </a>
+   </div>
+  </header>
+  <main>
+   <div class="my-12 flex justify-center bg-aoc-gray" id="announcement">
+    <p class="max-w-6xl paragraph text-dark text-center tracking-tighter">
+     <span>
+      The 2021 event is now over, congratulations to every puzzle solver out there!
+     </span>
+     <span class="">
+      You can help improve the event by
+      <a class="font-semibold hover:text-aoc-gray-dark" href="https://docs.google.com/forms/d/e/1FAIpQLSeAXNOVWRBzAAdL6_p1Uu0abji9Bb3eI2cHNk5ILgeSxP5E5w/viewform">
+       sharing your feedback and ideas
+      </a>
+      📣, I read every single comment.
+     </span>
+     <span>
+      Finally, stay tuned via
+      <a class="font-semibold hover:text-aoc-gray-dark" href="slack://channel?team=T02NE0241&amp;id=C02PN711H09">
+       the #aoc Slack channel
+      </a>
+      🔥
+     </span>
+    </p>
+   </div>
+   <div class="my-8 mx-4 sm:mx-auto max-w-6xl flex justify-center divide-x">
+    <div class="dashboard-tile flex flex-col items-center">
+     <div class="h-1/3 flex items-center">
+      <h2 class="text-lg strong text-center">
+       ThomasGerleve
+      </h2>
+     </div>
+     <div class="h-1/2 flex flex-col items-center justify-center gap-y-2">
+      <span class="text-2xl">
+       99
+       <sup class="text-sm">
+        th
+       </sup>
+       <span class="text-aoc-gray-dark">
+        /506
+        <span class="absolute">
+         <sup>
+          *
+         </sup>
+        </span>
+       </span>
+      </span>
+      <span class="text-xl text-aoc-atmospheric text-shadow-atmospheric">
+       9267 pts
+      </span>
+     </div>
+     <span class="text-sm text-aoc-gray-dark">
+      * synced users
+     </span>
+    </div>
+    <div class="dashboard-tile flex flex-col items-center">
+     <div class="h-1/3 flex items-center">
+      <h2 class="text-lg strong">
+       Stars
+      </h2>
+     </div>
+     <div class="h-1/2 flex items-center space-x-2">
+      <span class="text-aoc-gold text-2xl">
+       11*
+      </span>
+     </div>
+    </div>
+    <div class="dashboard-tile flex flex-col items-center">
+     <div class="h-1/3 flex items-center">
+      <h2 class="text-lg strong text-center">
+       <a class="link" href="/stats/batches/736">
+        Batch #736
+       </a>
+      </h2>
+     </div>
+     <div class="h-2/3 flex flex-col items-center justify-center gap-y-2">
+      <span class="text-2xl">
+       26
+       <sup class="text-sm">
+        th
+       </sup>
+       <span class="text-aoc-gray-dark">
+        /365
+       </span>
+      </span>
+      <span class="text-xl text-aoc-atmospheric text-shadow-atmospheric">
+       24429 pts
+      </span>
+      <span class="">
+       contrib.
+       <span class="text-aoc-atmospheric text-shadow-atmospheric">
+        9267 pts
+       </span>
+      </span>
+     </div>
+    </div>
+    <div class="dashboard-tile flex flex-col items-center">
+     <div class="h-1/3 flex items-center">
+      <h2 class="text-lg strong text-center">
+       <a class="link" href="/stats/cities/cologne">
+        Cologne
+       </a>
+      </h2>
+     </div>
+     <div class="h-2/3 flex flex-col items-center justify-center gap-y-2">
+      <span class="text-2xl">
+       21
+       <sup class="text-sm">
+        st
+       </sup>
+       <span class="text-aoc-gray-dark">
+        /41
+       </span>
+      </span>
+      <span class="text-xl text-aoc-atmospheric text-shadow-atmospheric">
+       16507 pts
+      </span>
+      <span class="">
+       contrib.
+       <span class="text-aoc-atmospheric text-shadow-atmospheric">
+        9267 pts
+       </span>
+      </span>
+     </div>
+    </div>
+   </div>
+   <div class="my-8 mx-4 sm:mx-auto flex justify-center">
+    <table cellspacing="0" class="text-lg text-right leading-tight">
+     <tr class="mx-2">
+      <th class="align-bottom font-light" rowspan="2">
+       Day
+      </th>
+      <th class="font-light text-aoc-silver" colspan="3">
+       –––––– Part 1 ––––––
+      </th>
+      <th class="font-light text-aoc-gold" colspan="3">
+       –––––– Part 2 ––––––
+      </th>
+     </tr>
+     <tr>
+      <th class="w-28 font-light text-aoc-silver" scope="col">
+       Time
+      </th>
+      <th class="w-20 font-light text-aoc-silver" scope="col">
+       Rank
+      </th>
+      <th class="w-20 font-light text-aoc-silver" scope="col">
+       Score
+      </th>
+      <th class="w-28 font-light text-aoc-gold" scope="col">
+       Time
+      </th>
+      <th class="w-20 font-light text-aoc-gold" scope="col">
+       Rank
+      </th>
+      <th class="w-20 font-light text-aoc-gold" scope="col">
+       Score
+      </th>
+     </tr>
+     <tr>
+      <th class="font-light">
+       25
+      </th>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       24
+      </th>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       23
+      </th>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       22
+      </th>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       21
+      </th>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       20
+      </th>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       19
+      </th>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       18
+      </th>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       17
+      </th>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       16
+      </th>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       15
+      </th>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       14
+      </th>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       13
+      </th>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       12
+      </th>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+      <td>
+       –
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       11
+      </th>
+      <td>
+       09:12:26
+      </td>
+      <td>
+       68
+      </td>
+      <td>
+       439
+      </td>
+      <td>
+       09:22:05
+      </td>
+      <td>
+       68
+      </td>
+      <td>
+       439
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       10
+      </th>
+      <td>
+       17:23:37
+      </td>
+      <td>
+       109
+      </td>
+      <td>
+       398
+      </td>
+      <td>
+       &gt;24h
+      </td>
+      <td>
+       110
+      </td>
+      <td>
+       397
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       9
+      </th>
+      <td>
+       04:51:55
+      </td>
+      <td>
+       97
+      </td>
+      <td>
+       410
+      </td>
+      <td>
+       11:22:51
+      </td>
+      <td>
+       95
+      </td>
+      <td>
+       412
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       8
+      </th>
+      <td>
+       03:13:15
+      </td>
+      <td>
+       77
+      </td>
+      <td>
+       430
+      </td>
+      <td>
+       08:32:42
+      </td>
+      <td>
+       90
+      </td>
+      <td>
+       417
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       7
+      </th>
+      <td>
+       04:38:14
+      </td>
+      <td>
+       115
+      </td>
+      <td>
+       392
+      </td>
+      <td>
+       05:10:32
+      </td>
+      <td>
+       110
+      </td>
+      <td>
+       397
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       6
+      </th>
+      <td>
+       03:49:36
+      </td>
+      <td>
+       83
+      </td>
+      <td>
+       424
+      </td>
+      <td>
+       07:50:56
+      </td>
+      <td>
+       101
+      </td>
+      <td>
+       406
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       5
+      </th>
+      <td>
+       06:56:26
+      </td>
+      <td>
+       88
+      </td>
+      <td>
+       419
+      </td>
+      <td>
+       08:18:28
+      </td>
+      <td>
+       80
+      </td>
+      <td>
+       427
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       4
+      </th>
+      <td>
+       06:27:49
+      </td>
+      <td>
+       87
+      </td>
+      <td>
+       420
+      </td>
+      <td>
+       08:45:14
+      </td>
+      <td>
+       84
+      </td>
+      <td>
+       423
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       3
+      </th>
+      <td>
+       01:40:15
+      </td>
+      <td>
+       60
+      </td>
+      <td>
+       447
+      </td>
+      <td>
+       04:25:38
+      </td>
+      <td>
+       80
+      </td>
+      <td>
+       427
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       2
+      </th>
+      <td>
+       02:48:36
+      </td>
+      <td>
+       78
+      </td>
+      <td>
+       429
+      </td>
+      <td>
+       03:34:30
+      </td>
+      <td>
+       98
+      </td>
+      <td>
+       409
+      </td>
+     </tr>
+     <tr>
+      <th class="font-light">
+       1
+      </th>
+      <td>
+       02:15:14
+      </td>
+      <td>
+       37
+      </td>
+      <td>
+       470
+      </td>
+      <td>
+       04:17:12
+      </td>
+      <td>
+       72
+      </td>
+      <td>
+       435
+      </td>
+     </tr>
+    </table>
+   </div>
+  </main>
+  <footer class="mt-auto mb-2 mx-auto opacity-70">
+   <div class="mt-8">
+    <span>
+     Made with ♥️ by
+     <a class="strong hover:text-aoc-atmospheric" href="slack://user?team=T02NE0241&amp;id=URZ0F4TEF">
+      Pilou
+     </a>
+    </span>
+    <span>
+     →
+    </span>
+    <a class="text-aoc-green hover:text-aoc-green-flash" href="https://github.com/pil0u/lewagon-aoc" target="blank">
+     <i class="fab fa-github">
+     </i>
+    </a>
+   </div>
+  </footer>
+ </body>
+</html>
