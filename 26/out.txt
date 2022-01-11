@@ -35,13 +35,13 @@ malex - Batch #1970 Brussels
 >>> Thank you very much for this, It was amazing ! And see you next year ;)
 ---
 ThomasGerleve - Batch #736 Cologne
->>> ciated!Hey Pilou, tct with them and stay in touch. The work you put into organizing this for us is greatly appre
+>>> Hey Pilou, thank you so much for your work on the le wagon aoc! For me as student from the most recent batch(#740) it was a perfect way to keep on practicing. Competing with my batchmates was also a great way to connect with them and stay in touch. The work you put into organizing this for us is greatly appreciated!
 ---
 thierry-silbermann - Batch #666 Lisbon
 >>> Thank you Pilou for making me stay awake or waking me up at 4;30 some days. Sorry that I didn't spend more time on looking at the dump you gave me but hey, I was already tired enough ! Anyway thanks again for all the work you put on the leaderboard and to make people enjoy doing some programming every day. Cheers
 ---
 Aquaj - Batch #19 Bordeaux
->>> tes efforts au niveau de l'orga commeDSalut Pilou ! Ça y est... c'est la fin pour cette édition, et pour de vrai cette fois ! C'était vraiment un plaisir de collaborer avec toi sur ce beau projet en tout cas. Merci pour tous 
+>>> Salut Pilou ! Ça y est... c'est la fin pour cette édition, et pour de vrai cette fois ! C'était vraiment un plaisir de collaborer avec toi sur ce beau projet en tout cas. Merci pour tous tes efforts au niveau de l'orga comme du code, et au plaisir de repartir pour un tour l'an pro :D
 ---
 freichel - Batch #606 Berlin
 >>> Hi Pilou, first of all you're welcome we didn't make you solve this at 6am! But seriously, thanks a lot for introducing me to AOC. I had an absolute blast solving these challenges, interacting with the community and adding fish to my shit list.
